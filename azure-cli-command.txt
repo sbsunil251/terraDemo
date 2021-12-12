@@ -1,0 +1,19 @@
+az login
+
+az ad sp create-for-rbac --name "sp-hello-azure-tf" --role Contributor 
+--scopes /subscriptions/<subscription-id> --sdk-auth
+
+ouput for this command:
+
+{
+  "clientId": "e5c0266f-4f9a-44b6-bd5f-c203447ef992",
+  "clientSecret": "4qqyXWQrVAHwrgtvQ9DPM5ek-4W255LY8e",
+  "subscriptionId": "31b625db-7920-423e-88d0-df5b6419e701",
+  "tenantId": "a976c852-d327-4927-be05-6650129d208c",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
