@@ -1,29 +1,18 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "~>2.0"
-    }
-  }
-}
-provider "azurerm" {  
+provider "azurerm" {
+  version = "=2.89.0"
   features {}
-  subscription_id   = "31b625db-7920-423e-88d0-df5b6419e701"
-  tenant_id         = "a976c852-d327-4927-be05-6650129d208c"
-  client_id         = "e5c0266f-4f9a-44b6-bd5f-c203447ef992"
-  client_secret     = "4qqyXWQrVAHwrgtvQ9DPM5ek-4W255LY8e"
 }
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "rg-hello-azure-tf"
-    storage_account_name = "sahelloazuretf123"
+    resource_group_name  = "rg-tf-git-azure"
+    storage_account_name = "satfgitazure"
     container_name       = "terraform-state"
     key                  = "terraform.tfstate"
   }
 }
 
-resource "azurerm_resource_group" "rg-hello-azure" {
-  name     = "rg-hello-azure"
-  location = "northcentralus"
+resource "azurerm_resource_group" "rg-tf-git123" {
+  name     = "rg-tf-git"
+  location = "centralindia"
 }

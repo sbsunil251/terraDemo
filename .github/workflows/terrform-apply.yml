@@ -2,14 +2,14 @@ name: Terraform Apply
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ Master ]
 
 jobs:
   terraform:
     runs-on: ubuntu-latest
 
     env:
-      ARM_CLIENT_ID: e5c0266f-4f9a-44b6-bd5f-c203447ef992
+      ARM_CLIENT_ID: 1bfe2c3c-46c0-458f-827d-290cbc7e990f
       ARM_CLIENT_SECRET: ${{secrets.TF_ARM_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: 31b625db-7920-423e-88d0-df5b6419e701
       ARM_TENANT_ID: a976c852-d327-4927-be05-6650129d208c
