@@ -19,7 +19,6 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
-
       
         - name: Init
         id: init
